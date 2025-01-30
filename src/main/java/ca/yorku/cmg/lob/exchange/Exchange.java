@@ -116,8 +116,8 @@ public class Exchange {
 			oOutcome = book.getBids().processOrder(o, time);
 			//If the quanity of the unfulfilled order in the outcome is not zero
 			if (oOutcome.getUnfulfilledOrder().getQuantity() > 0) {
-				// Not the entire order was fulfilled, add it to the bid half-book
-				book.getBids().addOrder((Bid)oOutcome.getUnfulfilledOrder());
+				// Not the entire order was fulfilled, add it to the ask half-book
+				book.getAsks().addOrder((Ask)oOutcome.getUnfulfilledOrder());
 			}			
 		}
 
