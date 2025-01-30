@@ -1,1 +1,7 @@
-target/*
+/target/
+
+# Eclipse
+.metadata/
+.classpath
+.project
+.settings
